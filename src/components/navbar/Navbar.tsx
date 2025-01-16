@@ -18,11 +18,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+    <nav className="fixed w-full top-0 z-50 bg-transparent backdrop-blur-[1px] md:mt-7 mt-2 px-4 md:px-0 ">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-white">
+          <h1 className="text-3xl font-bold text-white drop-shadow-md hover:text-white/90 transition-colors">
             Trustra
           </h1>
         </div>

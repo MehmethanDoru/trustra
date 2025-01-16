@@ -42,7 +42,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 mt-16">
+      <div className="container relative z-10 mt-0">
         <div className="text-center max-w-4xl mx-auto px-4">
           <div className="space-y-6 mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-white [text-shadow:_0_1px_12px_rgb(0_0_0_/_20%)] tracking-tight leading-tight sm:leading-normal">

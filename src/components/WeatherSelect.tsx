@@ -9,11 +9,16 @@ const weatherOptions = [
   { id: 2, name: 'Parçalı Bulutlu' },
   { id: 3, name: 'Bulutlu' },
   { id: 4, name: 'Yağmurlu' },
-  { id: 5, name: 'Karlı' },
-  { id: 6, name: 'Karla Karışık Yağmurlu' },
-  { id: 7, name: 'Az Bulutlu' },
-  { id: 8, name: 'Yağmurlu ve Güneşli' },
-  { id: 9, name: 'Gök Gürültülü Yağmurlu' },
+  { id: 5, name: 'Gök Gürültülü Yağışlı' },
+  { id: 6, name: 'Hafif Yağışlı' },
+  { id: 7, name: 'Karlı' },
+  { id: 8, name: 'Karla Karışık Yağmur' },
+  { id: 9, name: 'Sisli' },
+  { id: 10, name: 'Rüzgarlı' },
+  { id: 11, name: 'Sıcak' },
+  { id: 12, name: 'Soğuk' },
+  { id: 13, name: 'Serin' },
+  { id: 14, name: 'Ilık' }
 ];
 
 // Türkçe karakterleri İngilizce karakterlere çeviren fonksiyon

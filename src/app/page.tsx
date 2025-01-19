@@ -20,10 +20,45 @@ export default function Home() {
     endDate: null
   });
 
-  const handleSearch = () => {
-    console.log('Seçilen Hava Durumu:', selectedWeather?.name);
-    console.log('Başlangıç Tarihi:', selectedDates.startDate ? new Date(selectedDates.startDate).toLocaleDateString('tr-TR') : 'Seçilmedi');
-    console.log('Bitiş Tarihi:', selectedDates.endDate ? new Date(selectedDates.endDate).toLocaleDateString('tr-TR') : 'Seçilmedi');
+  const handleSearch = async () => {
+    if (!selectedWeather || !selectedDates.startDate || !selectedDates.endDate) {
+      console.log('Lütfen tüm alanları doldurun');
+      return;
+    }
+
+    try {
+      const searchParams = new URLSearchParams({
+        condition: selectedWeather.name,
+        startDate: selectedDates.startDate.toISOString().split('T')[0],
+        endDate: selectedDates.endDate.toISOString().split('T')[0]
+      });
+
+      const response = await fetch(`/api/weather/search?${searchParams}`);
+      const data = await response.json();
+
+      if (data.error) {
+        console.error('Arama hatası:', data.error);
+        return;
+      }
+
+      console.log('Arama Parametreleri:', {
+        'Hava Durumu': data.params.condition,
+        'Başlangıç Tarihi': data.params.startDate,
+        'Bitiş Tarihi': data.params.endDate
+      });
+      
+      console.log(`\nToplam ${data.totalDays} günde, ${data.totalUniqueCities} farklı şehirde "${data.params.condition}" hava durumu görülüyor.`);
+      
+      Object.entries(data.results as Record<string, string[]>).forEach(([date, cities]) => {
+        console.log(`\n${date} tarihinde ${cities.length} şehir:`);
+        cities.forEach((city: string) => {
+          console.log(`- ${city}`);
+        });
+      });
+
+    } catch (error) {
+      console.error('Arama sırasında bir hata oluştu:', error);
+    }
   };
 
   return (

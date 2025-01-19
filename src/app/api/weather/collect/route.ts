@@ -10,8 +10,50 @@ interface WeatherData {
   date: string;
   originalDate: string;
   condition: string;
+  standardCondition: string; // Standart hava durumu koşulu
   dayTemp: number;
   nightTemp: number;
+}
+
+// Hava durumu koşullarını eşleştirme
+const weatherConditionMap: Record<string, string> = {
+  'güneşli': 'Güneşli',
+  'parçalı bulutlu': 'Parçalı Bulutlu',
+  'çok bulutlu': 'Bulutlu',
+  'yağmurlu': 'Yağmurlu',
+  'sağanak yağışlı': 'Yağmurlu',
+  'kar yağışlı': 'Karlı',
+  'karla karışık yağmur': 'Karla Karışık Yağmurlu',
+  'hafif yağmurlu': 'Yağmurlu',
+  'az bulutlu': 'Az Bulutlu',
+  'bulutlu': 'Bulutlu',
+  'yağmur ve güneş': 'Yağmurlu ve Güneşli',
+  'gök gürültülü': 'Gök Gürültülü Yağmurlu',
+  'gök gürültülü sağanak yağışlı': 'Gök Gürültülü Yağmurlu',
+  'yağmurlu ve açık hava': 'Yağmurlu ve Güneşli',
+  'çoğunlukla güneşli': 'Güneşli',
+  'bulutların arasından ara ara kendini gösteren güneş': 'Parçalı Bulutlu',
+  'çok bulutlu sonrası güneş': 'Parçalı Bulutlu'
+};
+
+function standardizeCondition(condition: string): string {
+  const normalizedCondition = condition.toLowerCase().trim();
+  
+  // Tam eşleşme kontrolü
+  if (weatherConditionMap[normalizedCondition]) {
+    return weatherConditionMap[normalizedCondition];
+  }
+  
+  // Kısmi eşleşme kontrolü
+  for (const [key, value] of Object.entries(weatherConditionMap)) {
+    if (normalizedCondition.includes(key)) {
+      return value;
+    }
+  }
+  
+  // Eşleşme bulunamazsa orijinal durumu döndür
+  console.warn(`Eşleştirilemeyen hava durumu koşulu: ${condition}`);
+  return condition;
 }
 
 async function scrapeWeather(cityId: string, cityName: string): Promise<WeatherData[] | null> {
@@ -109,8 +151,9 @@ async function scrapeWeather(cityId: string, cityName: string): Promise<WeatherD
           cityId,
           region: cityData?.region || '',
           date: getDateFromText(dateText),
-          originalDate: dateText, // Orijinal tarih metnini de saklayalım
+          originalDate: dateText,
           condition,
+          standardCondition: standardizeCondition(condition),
           dayTemp: parseInt(dayTemp.replace('°', '')) || 0,
           nightTemp: parseInt(nightTemp.replace('°', '')) || 0
         });

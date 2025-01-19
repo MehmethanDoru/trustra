@@ -5,14 +5,15 @@ import { Combobox, Transition } from '@headlessui/react';
 import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
 
 const weatherOptions = [
-  { id: 1, name: 'Güneşli ve Sıcak' },
-  { id: 2, name: 'Ilıman' },
-  { id: 3, name: 'Serin' },
+  { id: 1, name: 'Güneşli' },
+  { id: 2, name: 'Parçalı Bulutlu' },
+  { id: 3, name: 'Bulutlu' },
   { id: 4, name: 'Yağmurlu' },
   { id: 5, name: 'Karlı' },
-  { id: 6, name: 'Rüzgarlı' },
-  { id: 7, name: 'Nemli' },
-  { id: 8, name: 'Kuru' },
+  { id: 6, name: 'Karla Karışık Yağmurlu' },
+  { id: 7, name: 'Az Bulutlu' },
+  { id: 8, name: 'Yağmurlu ve Güneşli' },
+  { id: 9, name: 'Gök Gürültülü Yağmurlu' },
 ];
 
 // Türkçe karakterleri İngilizce karakterlere çeviren fonksiyon

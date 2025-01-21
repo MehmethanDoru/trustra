@@ -109,8 +109,8 @@ export default function Hero({
                 </button>
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#4cbafa] [text-shadow:_0_1px_12px_rgb(0_0_0_/_20%)] tracking-tight leading-tight sm:leading-normal">
-              <span className="inline-block border-r-4 border-[#a4d6f3] pr-1">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#fff] [text-shadow:_0_1px_12px_rgb(0_0_0_/_20%)] tracking-tight leading-tight sm:leading-normal ">
+              <span className="inline-block   border-b-[3px] border-[#fff] pr-1">
                 {text}
               </span>
               <br className="sm:hidden" />

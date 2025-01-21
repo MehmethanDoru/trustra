@@ -35,7 +35,7 @@ const Navbar = () => {
       px-4 md:px-0
     `}>
       <div className={`
-        container mx-auto flex items-center justify-between
+         mx-auto flex items-center justify-between max-w-[1370px]
         ${isScrolled ? 'h-12' : 'h-16'}
         transition-all duration-300
       `}>

@@ -9,6 +9,39 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        'slide-text': 'slide 4s steps(2) infinite',
+        'typewriter': 'typing 4s steps(20) infinite',
+      },
+      keyframes: {
+        slide: {
+          '0%, 50%': {
+            transform: 'translateY(0%)',
+          },
+          '50.01%, 100%': {
+            transform: 'translateY(-50%)',
+          }
+        },
+        typing: {
+          '0%, 50%': {
+            width: '0%',
+            content: 'Hava Durumuna Göre',
+          },
+          '25%': {
+            width: '100%',
+            content: 'Hava Durumuna Göre',
+          },
+          '75%': {
+            width: '100%',
+            content: 'Sıcaklık Durumuna Göre',
+          },
+          '100%': {
+            width: '0%',
+            content: 'Sıcaklık Durumuna Göre',
+          }
+        }
+      },
+      
       colors: {
         primary: {
           blue: '#3399FF',    // Dark mode mavi

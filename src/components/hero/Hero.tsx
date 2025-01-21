@@ -3,7 +3,7 @@
 import Image from "next/image";
 import WeatherSelect from "@/components/WeatherSelect";
 import DateRangePicker from "@/components/DateRangePicker";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface WeatherOption {
   id: number;
@@ -26,6 +26,8 @@ interface HeroProps {
   onTabChange: (tab: "route" | "all") => void;
 }
 
+const texts = ["Hava Koşuluna Göre", "Hava Sıcaklığına Göre"];
+
 export default function Hero({
   onWeatherSelect,
   onDateSelect,
@@ -34,11 +36,34 @@ export default function Hero({
   onTabChange,
 }: HeroProps) {
   const [activeTab, setActiveTab] = useState<"route" | "all">("all");
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
 
   const handleTabChange = (tab: "route" | "all") => {
     setActiveTab(tab);
     onTabChange(tab);
   };
+
+  useEffect(() => {
+    const currentText = texts[loopNum % texts.length];
+    const shouldDelete = isDeleting;
+    
+    const timeout = setTimeout(() => {
+      if (!shouldDelete && text.length < currentText.length) {
+        setText(currentText.slice(0, text.length + 1));
+      } else if (shouldDelete && text.length > 0) {
+        setText(currentText.slice(0, text.length - 1));
+      } else if (text.length === 0) {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      } else if (!shouldDelete && text.length === currentText.length) {
+        setIsDeleting(true);
+      }
+    }, isDeleting ? 50 : 150);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, loopNum]);
 
   return (
     <div className="relative h-screen flex items-center justify-center">
@@ -84,9 +109,12 @@ export default function Hero({
                 </button>
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white [text-shadow:_0_1px_12px_rgb(0_0_0_/_20%)] tracking-tight leading-tight sm:leading-normal">
-              Hava Durumuna Göre
-              <br className="sm:hidden" /> Seyahat Planla
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#4cbafa] [text-shadow:_0_1px_12px_rgb(0_0_0_/_20%)] tracking-tight leading-tight sm:leading-normal">
+              <span className="inline-block border-r-4 border-[#a4d6f3] pr-1">
+                {text}
+              </span>
+              <br className="sm:hidden" />
+              <span className="text-[#ffffff] "> Seyahat Planla</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 font-medium max-w-2xl mx-auto [text-shadow:_0_1px_8px_rgb(0_0_0_/_20%)]">
               İdeal tatil noktanızı keşfedin
@@ -102,7 +130,7 @@ export default function Hero({
           <button
             onClick={onSearch}
             disabled={isLoading}
-            className="mx-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-lg font-medium rounded-xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 disabled:from-blue-400 disabled:to-blue-300 disabled:cursor-not-allowed flex items-center justify-center gap-3 min-w-[180px]"
+            className="mx-auto px-8 py-4 bg-[#4cbafa] text-white text-lg font-medium rounded-xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/30 disabled:from-blue-400 disabled:to-blue-300 disabled:cursor-not-allowed flex items-center justify-center gap-3 min-w-[180px]"
           >
             {isLoading ? (
               <>

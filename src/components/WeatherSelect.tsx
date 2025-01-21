@@ -6,7 +6,7 @@ import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
 
 const weatherOptions = [
   {
-    category: 'Hava Durumu',
+    category: 'Hava Koşulu',
     options: [
       { id: 1, name: 'Güneşli' },
       { id: 2, name: 'Parçalı Bulutlu' },

@@ -5,19 +5,29 @@ import { Combobox, Transition } from '@headlessui/react';
 import { HiCheck, HiChevronUpDown } from 'react-icons/hi2';
 
 const weatherOptions = [
-  { id: 1, name: 'Güneşli' },
-  { id: 2, name: 'Parçalı Bulutlu' },
-  { id: 3, name: 'Bulutlu' },
-  { id: 4, name: 'Yağmurlu' },
-  { id: 5, name: 'Gök Gürültülü Yağışlı' },
-  { id: 6, name: 'Hafif Yağışlı' },
-  { id: 7, name: 'Karlı' },
-  { id: 8, name: 'Sisli' },
-  { id: 9, name: 'Rüzgarlı' },
-  { id: 10, name: 'Sıcak' },
-  { id: 11, name: 'Soğuk' },
-  { id: 12, name: 'Serin' },
-  { id: 13, name: 'Ilık' }
+  {
+    category: 'Hava Durumu',
+    options: [
+      { id: 1, name: 'Güneşli' },
+      { id: 2, name: 'Parçalı Bulutlu' },
+      { id: 3, name: 'Bulutlu' },
+      { id: 4, name: 'Yağmurlu' },
+      { id: 5, name: 'Gök Gürültülü Yağışlı' },
+      { id: 6, name: 'Hafif Yağışlı' },
+      { id: 7, name: 'Karlı' },
+      { id: 8, name: 'Sisli' },
+      { id: 9, name: 'Rüzgarlı' },
+    ]
+  },
+  {
+    category: 'Sıcaklık',
+    options: [
+      { id: 10, name: 'Sıcak' },
+      { id: 11, name: 'Soğuk' },
+      { id: 12, name: 'Serin' },
+      { id: 13, name: 'Ilık' }
+    ]
+  }
 ];
 
 // Convert Turkish characters to English characters
@@ -54,12 +64,17 @@ export default function WeatherSelect({ onSelect }: WeatherSelectProps) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Flatten options for filtering
+  const allOptions = weatherOptions.flatMap(category => category.options);
+
   const filteredWeather =
     query === ''
-      ? weatherOptions
-      : weatherOptions.filter((weather) =>
-          turkishToLower(weather.name)
-            .includes(turkishToLower(query))
+      ? allOptions
+      : allOptions.filter((weather) =>
+          weather.name
+            .toLowerCase()
+            .replace(/\s+/g, '')
+            .includes(query.toLowerCase().replace(/\s+/g, ''))
         );
 
   const handleSelect = (value: { id: number; name: string; } | null) => {
@@ -128,50 +143,64 @@ export default function WeatherSelect({ onSelect }: WeatherSelectProps) {
             afterLeave={() => setQuery('')}
           >
             <Combobox.Options 
-              className="absolute left-0 sm:left-auto sm:right-0 z-50 mt-2 w-full max-h-60 overflow-auto rounded-lg bg-white/10 backdrop-blur-md py-2 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm weather-select-scroll"
-              static
+              className="absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-lg border border-white/20 bg-white/10 backdrop-blur-md shadow-lg focus:outline-none weather-select-scroll"
             >
-              {filteredWeather.length === 0 && query !== '' ? (
-                <div className="relative cursor-default select-none py-3 px-4 text-white">
-                  Sonuç bulunamadı.
+              {query !== '' && filteredWeather.length === 0 ? (
+                <div className="px-4 py-3 text-sm text-white/70 text-center">
+                  Sonuç bulunamadı
                 </div>
               ) : (
-                filteredWeather.map((weather, index) => (
-                  <div key={weather.id}>
-                    <Combobox.Option
-                      className={({ active }) =>
-                        `relative cursor-pointer select-none py-3 pl-10 pr-4 ${
-                          active ? 'bg-white/20 text-white' : 'text-white'
-                        } transition-colors`
-                      }
-                      value={weather}
-                    >
-                      {({ selected, active }) => (
-                        <>
-                          <span
-                            className={`block truncate ${
-                              selected ? 'font-medium' : 'font-normal'
-                            }`}
+                weatherOptions.map((category) => {
+                  const filteredOptions = category.options.filter((weather) =>
+                    weather.name
+                      .toLowerCase()
+                      .replace(/\s+/g, '')
+                      .includes(query.toLowerCase().replace(/\s+/g, ''))
+                  );
+
+                  // Eğer bu kategoride filtrelenmiş sonuç yoksa, kategoriyi gösterme
+                  if (filteredOptions.length === 0) return null;
+
+                  return (
+                    <div key={category.category}>
+                      <div className="px-4 py-2 text-sm font-medium text-start text-white/70 bg-white/5 backdrop-blur-md">
+                        {category.category}
+                      </div>
+                      {filteredOptions.map((weather, index) => (
+                        <Fragment key={weather.id}>
+                          <Combobox.Option
+                            value={weather}
+                            className={({ active }) =>
+                              `relative cursor-default select-none py-3 pl-10 pr-4 ${
+                                active ? 'bg-white/20' : ''
+                              }`
+                            }
                           >
-                            {weather.name}
-                          </span>
-                          {selected ? (
-                            <span
-                              className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                                active ? 'text-white' : 'text-white'
-                              }`}
-                            >
-                              <HiCheck className="h-5 w-5" aria-hidden="true" />
-                            </span>
-                          ) : null}
-                        </>
-                      )}
-                    </Combobox.Option>
-                    {index < filteredWeather.length - 1 && (
-                      <div className="mx-4 border-t border-white/10"></div>
-                    )}
-                  </div>
-                ))
+                            {({ selected, active }) => (
+                              <>
+                                <span className={`block truncate text-white cursor-pointer ${selected ? 'font-medium' : 'font-normal'}`}>
+                                  {weather.name}
+                                </span>
+                                {selected ? (
+                                  <span
+                                    className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
+                                      active ? 'text-white' : 'text-white'
+                                    }`}
+                                  >
+                                    <HiCheck className="h-5 w-5" aria-hidden="true" />
+                                  </span>
+                                ) : null}
+                              </>
+                            )}
+                          </Combobox.Option>
+                          {index < filteredOptions.length - 1 && (
+                            <div className="mx-4 border-t border-white/10 cursor-pointer"></div>
+                          )}
+                        </Fragment>
+                      ))}
+                    </div>
+                  );
+                })
               )}
             </Combobox.Options>
           </Transition>

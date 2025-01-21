@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Hero from '@/components/hero/Hero';
+import CityResults from '@/components/results/CityResults';
 
 interface WeatherOption {
   id: number;
@@ -13,6 +14,19 @@ interface DateRange {
   endDate: Date | null;
 }
 
+interface City {
+  name: string;
+  region: string;
+  dates: string[];
+}
+
+const tempRanges = {
+  'Sıcak': { min: 20 },
+  'Ilık': { min: 14, max: 20 },
+  'Serin': { min: 5, max: 14 },
+  'Soğuk': { max: 5 }
+} as const;
+
 export default function Home() {
   const [selectedWeather, setSelectedWeather] = useState<WeatherOption | null>(null);
   const [selectedDates, setSelectedDates] = useState<DateRange>({
@@ -20,6 +34,8 @@ export default function Home() {
     endDate: null
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState<'route' | 'all'>('all');
+  const [cities, setCities] = useState<City[]>([]);
 
   const handleSearch = async () => {
     if (!selectedWeather || !selectedDates.startDate || !selectedDates.endDate) {
@@ -29,8 +45,8 @@ export default function Home() {
 
     try {
       setIsLoading(true);
+      setCities([]); // reset
 
-      // API'den verileri çek
       const response = await fetch('/api/weather/collect2');
       const data = await response.json();
 
@@ -39,13 +55,9 @@ export default function Home() {
         return;
       }
 
-      // Mevcut tarihleri kontrol et
-      const availableDates = Object.keys(data.data).sort();
-      console.log('\nMevcut Tarih Aralığı:');
-      console.log(`İlk Tarih: ${availableDates[0]}`);
-      console.log(`Son Tarih: ${availableDates[availableDates.length - 1]}`);
+      console.log('Seçilen hava durumu:', selectedWeather.name);
+      console.log('Sıcaklık seçeneği mi?:', selectedWeather.name in tempRanges);
 
-      // Seçilen tarihleri YYYY-MM-DD formatına çevir
       const formatDate = (date: Date) => {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -56,41 +68,72 @@ export default function Home() {
       const startDateStr = formatDate(selectedDates.startDate);
       const endDateStr = formatDate(selectedDates.endDate);
 
-      // Her gün için şehirleri filtrele
-      const matchingCities = new Set<string>();
-      const citiesByDate: Record<string, string[]> = {};
-      
+      console.log('Tarih aralığı:', startDateStr, 'ile', endDateStr);
+
+      // Şehirleri ve tarihlerini topla
+      const cityData: Record<string, { region: string; dates: string[] }> = {};
+
       Object.entries(data.data).forEach(([date, cityDataArray]) => {
-        // Tarih aralığı kontrolü
         if (date >= startDateStr && date <= endDateStr) {
-          citiesByDate[date] = [];
-          // O gündeki şehirleri kontrol et
-          (cityDataArray as any[]).forEach((cityData) => {
-            if (cityData.condition === selectedWeather.name) {
-              const cityInfo = `${cityData.cityName} (${cityData.region})`;
-              matchingCities.add(cityInfo);
-              citiesByDate[date].push(cityInfo);
+          (cityDataArray as any[]).forEach((city) => {
+            let matches = false;
+
+            if (selectedWeather.name in tempRanges) {
+              const range = tempRanges[selectedWeather.name as keyof typeof tempRanges];
+              const temp = city.dayTemp;
+              
+              if ('min' in range && 'max' in range) {
+                matches = temp >= range.min && temp <= range.max;
+              } else if ('min' in range) {
+                matches = temp >= range.min;
+              } else if ('max' in range) {
+                matches = temp <= range.max;
+              }
+
+              // Sıcaklık eşleşme durumunu logla
+              if (matches) {
+                console.log(`${city.cityName}: ${temp}°C - Eşleşti (${selectedWeather.name})`);
+              }
+            } else {
+              matches = city.condition === selectedWeather.name;
+              // Hava durumu eşleşme durumunu logla
+              if (matches) {
+                console.log(`${city.cityName}: ${city.condition} - Eşleşti`);
+              }
+            }
+
+            if (matches) {
+              if (!cityData[city.cityName]) {
+                cityData[city.cityName] = {
+                  region: city.region,
+                  dates: []
+                };
+              }
+              cityData[city.cityName].dates.push(date);
             }
           });
         }
       });
 
-      // Sonuçları konsola yazdır
-      console.log(`\n${selectedWeather.name} hava durumu için ${startDateStr} - ${endDateStr} tarihleri arasında bulunan şehirler:`);
-      console.log('----------------------------------------');
-      
-      // Tarihe göre şehirleri göster
-      Object.entries(citiesByDate).forEach(([date, cities]) => {
-        if (cities.length > 0) {
-          console.log(`\n${date} tarihinde ${cities.length} şehir:`);
-          cities.sort().forEach(city => {
-            console.log(`- ${city}`);
-          });
-        }
-      });
-      
-      console.log('\n----------------------------------------');
-      console.log(`Toplam ${matchingCities.size} benzersiz şehir bulundu.`);
+      // Tüm günlerde uygun olan şehirleri filtrele
+      const totalDays = Object.keys(data.data).filter(date => 
+        date >= startDateStr && date <= endDateStr
+      ).length;
+
+      console.log('Toplam gün sayısı:', totalDays);
+
+      const consistentCities = Object.entries(cityData)
+        .filter(([_, data]) => data.dates.length === totalDays)
+        .map(([name, data]) => ({
+          name,
+          region: data.region,
+          dates: data.dates
+        }));
+
+      console.log('Bulunan şehir sayısı:', consistentCities.length);
+      console.log('Şehirler:', consistentCities);
+
+      setCities(consistentCities);
 
     } catch (error) {
       console.error('Veri alınırken hata oluştu:', error);
@@ -100,11 +143,20 @@ export default function Home() {
   };
 
   return (
-    <Hero 
-      onWeatherSelect={setSelectedWeather}
-      onDateSelect={setSelectedDates}
-      onSearch={handleSearch}
-      isLoading={isLoading}
-    />
+    <main className="relative">
+      <Hero 
+        onWeatherSelect={setSelectedWeather}
+        onDateSelect={setSelectedDates}
+        onSearch={handleSearch}
+        isLoading={isLoading}
+        onTabChange={setActiveTab}
+      />
+      <CityResults
+        cities={cities}
+        isLoading={isLoading}
+        searchedWeather={selectedWeather?.name || ''}
+        dateRange={selectedDates}
+      />
+    </main>
   );
 }

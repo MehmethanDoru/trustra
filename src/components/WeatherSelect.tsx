@@ -12,16 +12,15 @@ const weatherOptions = [
   { id: 5, name: 'Gök Gürültülü Yağışlı' },
   { id: 6, name: 'Hafif Yağışlı' },
   { id: 7, name: 'Karlı' },
-  { id: 8, name: 'Karla Karışık Yağmur' },
-  { id: 9, name: 'Sisli' },
-  { id: 10, name: 'Rüzgarlı' },
-  { id: 11, name: 'Sıcak' },
-  { id: 12, name: 'Soğuk' },
-  { id: 13, name: 'Serin' },
-  { id: 14, name: 'Ilık' }
+  { id: 8, name: 'Sisli' },
+  { id: 9, name: 'Rüzgarlı' },
+  { id: 10, name: 'Sıcak' },
+  { id: 11, name: 'Soğuk' },
+  { id: 12, name: 'Serin' },
+  { id: 13, name: 'Ilık' }
 ];
 
-// Türkçe karakterleri İngilizce karakterlere çeviren fonksiyon
+// Convert Turkish characters to English characters
 const turkishToLower = (str: string) => {
   return str
     .toLowerCase()

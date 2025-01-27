@@ -18,6 +18,12 @@ interface City {
   name: string;
   region: string;
   dates: string[];
+  weather?: {
+    condition: string;
+    dayTemp: number;
+    nightTemp: number;
+    precipitation?: number;
+  };
 }
 
 const tempRanges = {
@@ -108,7 +114,16 @@ export default function Home() {
       console.log('Tarih aralığı:', startDateStr, 'ile', endDateStr);
 
       // date and city data
-      const cityData: Record<string, { region: string; dates: string[] }> = {};
+      const cityData: Record<string, { 
+        region: string; 
+        dates: string[]; 
+        weatherByDate: Record<string, {
+          condition: string;
+          dayTemp: number;
+          nightTemp: number;
+          precipitation?: number;
+        }>;
+      }> = {};
 
       Object.entries(data.data).forEach(([date, cityDataArray]) => {
         if (date >= startDateStr && date <= endDateStr) {
@@ -127,13 +142,11 @@ export default function Home() {
                 matches = temp <= range.max;
               }
 
-              // temp match
               if (matches) {
                 console.log(`${city.cityName}: ${temp}°C - Eşleşti (${selectedWeather.name})`);
               }
             } else {
               matches = city.condition === selectedWeather.name;
-              // condition match
               if (matches) {
                 console.log(`${city.cityName}: ${city.condition} - Eşleşti`);
               }
@@ -143,10 +156,17 @@ export default function Home() {
               if (!cityData[city.cityName]) {
                 cityData[city.cityName] = {
                   region: city.region,
-                  dates: []
+                  dates: [],
+                  weatherByDate: {}
                 };
               }
               cityData[city.cityName].dates.push(date);
+              cityData[city.cityName].weatherByDate[date] = {
+                condition: city.condition,
+                dayTemp: city.dayTemp,
+                nightTemp: city.nightTemp,
+                precipitation: city.precipitation
+              };
             }
           });
         }
@@ -164,7 +184,8 @@ export default function Home() {
         .map(([name, data]) => ({
           name,
           region: data.region,
-          dates: data.dates
+          dates: data.dates,
+          weatherByDate: data.weatherByDate
         }));
 
       console.log('Bulunan şehir sayısı:', consistentCities.length);

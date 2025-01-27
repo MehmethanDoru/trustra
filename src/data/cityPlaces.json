@@ -1,0 +1,1915 @@
+{
+  "cities": [
+    {
+      "id": "01",
+      "name": "Adana",
+      "places": [
+        {
+          "name": "Taş Köprü"
+        },
+        {
+          "name": "Adana Ulu Cami"
+        },
+        {
+          "name": "Büyük Saat Kulesi"
+        },
+        {
+          "name": "Yılan Kalesi"
+        },
+        {
+          "name": "Yerköprü Mesire Alanı"
+        },
+        {
+          "name": "Kapıkaya Kanyonu"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Adıyaman",
+      "places": [
+        {
+          "name": "Nemrut Ören Yeri"
+        },
+        {
+          "name": "Cendere Köprüsü"
+        },
+        {
+          "name": "Perre Antik Kenti"
+        },
+        {
+          "name": "Arsameia Ören Yeri"
+        },
+        {
+          "name": "Gerger Kalesi"
+        },
+        {
+          "name": "Adıyaman Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "Afyonkarahisar",
+      "places": [
+        {
+          "name": "Afyonkarahisar Kalesi"
+        },
+        {
+          "name": "Ayazini Ören Yeri"
+        },
+        {
+          "name": "Abdülkadir Geylani Türbesi"
+        },
+        {
+          "name": "Büyük Taarruz Şehitliği"
+        },
+        {
+          "name": "Taşhan"
+        },
+        {
+          "name": "Karacaahmet Türbesi"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "name": "Ağrı",
+      "places": [
+        {
+          "name": "İshak Paşa Sarayı"
+        },
+        {
+          "name": "Ağrı Dağı"
+        },
+        {
+          "name": "Meteor Çukuru"
+        },
+        {
+          "name": "Balık Gölü"
+        },
+        {
+          "name": "Nuh'un Gemisi"
+        },
+        {
+          "name": "Diyadin Kaplıcaları"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "Amasya",
+      "places": [
+        {
+          "name": "Amasya Kalesi"
+        },
+        {
+          "name": "Boraboy Gölü"
+        },
+        {
+          "name": "Aynalı Mağara"
+        },
+        {
+          "name": "Gök Medrese"
+        },
+        {
+          "name": "Şehzadeler Müzesi"
+        },
+        {
+          "name": "Kral Kaya Mezarları"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "name": "Ankara",
+      "places": [
+        {
+          "name": "Anıtkabir"
+        },
+        {
+          "name": "Cumhuriyet Müzesi"
+        },
+        {
+          "name": "Ulucanlar Cezaevi Müzesi"
+        },
+        {
+          "name": "Kuğulu Park"
+        },
+        {
+          "name": "Hacı Bayram Veli Cami"
+        },
+        {
+          "name": "Etnografya Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Antalya",
+      "places": [
+        {
+          "name": "Side Antik Kenti"
+        },
+        {
+          "name": "Düden Şelalesi"
+        },
+        {
+          "name": "Olympos"
+        },
+        {
+          "name": "Manavgat Şelalesi"
+        },
+        {
+          "name": "Aspendos"
+        },
+        {
+          "name": "Damlataş Mağarası"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "name": "Artvin",
+      "places": [
+        {
+          "name": "Cehennem Deresi Kanyonu"
+        },
+        {
+          "name": "Artvin Atatürk Heykeli"
+        },
+        {
+          "name": "Ortacalar Çifte Köprüler"
+        },
+        {
+          "name": "Şavşat Karagöl"
+        },
+        {
+          "name": "Artvin Kalesi"
+        },
+        {
+          "name": "Tibeti Kilisesi"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "name": "Aydın",
+      "places": [
+        {
+          "name": "Zeus Mağarası"
+        },
+        {
+          "name": "Zincirli Han"
+        },
+        {
+          "name": "Aydın Arkeoloji Müzesi"
+        },
+        {
+          "name": "Yörük Ali Efe Evi Müzesi"
+        },
+        {
+          "name": "Eski Doğanbey Köyü"
+        },
+        {
+          "name": "Didyma Kutsal Alanı"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Balıkesir",
+      "places": [
+        {
+          "name": "Kuş Cenneti Milli Parkı"
+        },
+        {
+          "name": "Şeytan Sofrası"
+        },
+        {
+          "name": "Ayışığı Manastırı"
+        },
+        {
+          "name": "Değirmenboğazı Tabiat Parkı"
+        },
+        {
+          "name": "Kyzikos Antik Kenti"
+        },
+        {
+          "name": "Taksiyarhis Anıt Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Bilecik",
+      "places": [
+        {
+          "name": "Pelitözü Göleti"
+        },
+        {
+          "name": "Şeyh Edebali Türbesi"
+        },
+        {
+          "name": "Metristepe Zafer Anıtı"
+        },
+        {
+          "name": "Atatürk Köşkü"
+        },
+        {
+          "name": "Orhangazi Camii"
+        },
+        {
+          "name": "Bozcaarmut Göleti"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Bingöl",
+      "places": [
+        {
+          "name": "Yüzen Ada"
+        },
+        {
+          "name": "Sülbüs Dağı"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Bitlis",
+      "places": [
+        {
+          "name": "Ahlat Selçuklu Meydan Mezarlığı"
+        },
+        {
+          "name": "Ahlat Müzesi"
+        },
+        {
+          "name": "İskender Paşa Camii"
+        },
+        {
+          "name": "Bitlis Etnografya Müzesi"
+        },
+        {
+          "name": "Tatvan Kalesi"
+        },
+        {
+          "name": "Bitlis Kalesi"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Bolu",
+      "places": [
+        {
+          "name": "Abant Gölü"
+        },
+        {
+          "name": "Yedigöller Milli Parkı"
+        },
+        {
+          "name": "Kartalkaya Kayak Merkezi"
+        },
+        {
+          "name": "Sünnet Gölü Tabiat Parkı"
+        },
+        {
+          "name": "Akkaya Travertenleri"
+        },
+        {
+          "name": "Sülüklügöl Tabiat Parkı"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Burdur",
+      "places": [
+        {
+          "name": "Salda Gölü"
+        },
+        {
+          "name": "Sagalassos Antik Kenti"
+        },
+        {
+          "name": "Susuz Han"
+        },
+        {
+          "name": "Taş Oda Konağı"
+        },
+        {
+          "name": "Boubon Antik Kenti"
+        },
+        {
+          "name": "İncir Han"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Bursa",
+      "places": [
+        {
+          "name": "Bursa Ulu Cami"
+        },
+        {
+          "name": "İnkaya Çınarı"
+        },
+        {
+          "name": "Yeşil Türbe"
+        },
+        {
+          "name": "Osman Gazi Türbesi"
+        },
+        {
+          "name": "Irgandı Köprüsü"
+        },
+        {
+          "name": "Cumalıkızık Köyü"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Çanakkale",
+      "places": [
+        {
+          "name": "Çanakkale Şehitler Abidesi"
+        },
+        {
+          "name": "Troya Müzesi"
+        },
+        {
+          "name": "Aynalı Çarşı"
+        },
+        {
+          "name": "Conkbayırı Atatürk Zafer Anıtı"
+        },
+        {
+          "name": "Aleksandria Troas Antik Kenti"
+        },
+        {
+          "name": "Bozcaada Kalesi"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Çankırı",
+      "places": [
+        {
+          "name": "Eldivan Bülbül Pınarı"
+        },
+        {
+          "name": "Çankırı Kalesi"
+        },
+        {
+          "name": "Taş Mescit"
+        },
+        {
+          "name": "Bayramören Köprüsü"
+        },
+        {
+          "name": "Hüyük Yeraltı Şehri"
+        },
+        {
+          "name": "Çivitoğlu Medresesi"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Çorum",
+      "places": [
+        {
+          "name": "Hattuşa"
+        },
+        {
+          "name": "Alacahöyük Müze ve Ören Yeri"
+        },
+        {
+          "name": "İncesu Kanyonu"
+        },
+        {
+          "name": "Koyunbaba Köprüsü"
+        },
+        {
+          "name": "Şapinuva Ören Yeri"
+        },
+        {
+          "name": "Çorum Saat Kulesi"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Denizli",
+      "places": [
+        {
+          "name": "Pamukkale Termal Suları"
+        },
+        {
+          "name": "Çivril Işıklı Gölü"
+        },
+        {
+          "name": "Pamukkale Hierapoli Antik Kenti"
+        },
+        {
+          "name": "Karahayıt Kaplıcaları"
+        },
+        {
+          "name": "Kaklık Mağarası"
+        },
+        {
+          "name": "Keloğlan Mağarası"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Diyarbakır",
+      "places": [
+        {
+          "name": "Dicle Köprüsü"
+        },
+        {
+          "name": "Malabadi Köprüsü"
+        },
+        {
+          "name": "Çermik Kaplıcaları"
+        },
+        {
+          "name": "Saint George Kilisesi"
+        },
+        {
+          "name": "Gazi Köşkü"
+        },
+        {
+          "name": "Hasan Paşa Hanı"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Edirne",
+      "places": [
+        {
+          "name": "Meriç ve Tunca Nehirleri"
+        },
+        {
+          "name": "Erikli Plajı"
+        },
+        {
+          "name": "Karaağaç Tren Garı"
+        },
+        {
+          "name": "Adalet Kasrı"
+        },
+        {
+          "name": "Hıdırlık Tabyası"
+        },
+        {
+          "name": "Edirne Büyük Sinagogu"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Elazığ",
+      "places": [
+        {
+          "name": "Hazar Gölü"
+        },
+        {
+          "name": "Harput Kalesi"
+        },
+        {
+          "name": "İzzet Paşa Camii"
+        },
+        {
+          "name": "Golan Kaplıcaları"
+        },
+        {
+          "name": "Meryem Ana Kilisesi"
+        },
+        {
+          "name": "Cimşit Bey Hamamı"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Erzincan",
+      "places": [
+        {
+          "name": "Girlevik Şelalesi"
+        },
+        {
+          "name": "Mama Hatun Külliyesi"
+        },
+        {
+          "name": "Terzibaba Türbesi"
+        },
+        {
+          "name": "Ekşisu Mesire Alanı"
+        },
+        {
+          "name": "Altıntepe Ören Yeri"
+        },
+        {
+          "name": "Sultan Melik Türbesi"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Erzurum",
+      "places": [
+        {
+          "name": "Üç Kümbetler"
+        },
+        {
+          "name": "Tortum Şelalesi"
+        },
+        {
+          "name": "Narman Peri Bacaları"
+        },
+        {
+          "name": "Lala Paşa Camii"
+        },
+        {
+          "name": "Rüstem Paşa Kervansarayı"
+        },
+        {
+          "name": "İspir Yedigöller"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Eskişehir",
+      "places": [
+        {
+          "name": "Karacahisar Kalesi"
+        },
+        {
+          "name": "Dede Korkut Parkı"
+        },
+        {
+          "name": "Midas Anıtı"
+        },
+        {
+          "name": "Şelale Park"
+        },
+        {
+          "name": "Sivrihisar Ulu Camii"
+        },
+        {
+          "name": "Bilim Kültü ve Sanat Parkı"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Gaziantep",
+      "places": [
+        {
+          "name": "Gaziantep Bakırcılar Çarşısı"
+        },
+        {
+          "name": "Gaziantep Kalesi"
+        },
+        {
+          "name": "Şahinbey Milli Mücadele Müzesi"
+        },
+        {
+          "name": "Dülük Antik Kenti"
+        },
+        {
+          "name": "Tarihi Antep Evleri"
+        },
+        {
+          "name": "Rumkale"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Giresun",
+      "places": [
+        {
+          "name": "Mavi Göl"
+        },
+        {
+          "name": "Giresun Kalesi"
+        },
+        {
+          "name": "Meryem Ana Manastırı"
+        },
+        {
+          "name": "Giresun Adası"
+        },
+        {
+          "name": "Tirebolu Kalesi"
+        },
+        {
+          "name": "Göksu Travertenleri"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Gümüşhane",
+      "places": [
+        {
+          "name": "Santa Harabeleri"
+        },
+        {
+          "name": "Karaca Mağarası"
+        },
+        {
+          "name": "Sarıçiçek Köy Odaları"
+        },
+        {
+          "name": "Aydınlar Kilisesi"
+        },
+        {
+          "name": "İmera Manastırı"
+        },
+        {
+          "name": "Torul Kalesi Cam Seyir Terası"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Hakkari",
+      "places": [
+        {
+          "name": "Berçelan Yaylası"
+        },
+        {
+          "name": "Meydan Medresesi"
+        },
+        {
+          "name": "Nehri Taş Köprü"
+        },
+        {
+          "name": "Kayme Sarayı"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Hatay",
+      "places": [
+        {
+          "name": "Payas Kalesi"
+        },
+        {
+          "name": "Ortodoksi Kilisesi"
+        },
+        {
+          "name": "Antakya Kalesi ve Surları"
+        },
+        {
+          "name": "Beşikli Mağara"
+        },
+        {
+          "name": "Hatay Arkeoloji Müzesi"
+        },
+        {
+          "name": "Hıdırbey Musa Ağacı"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Isparta",
+      "places": [
+        {
+          "name": "Kovada Gölü Milli Parkı"
+        },
+        {
+          "name": "Melikler Yaylası"
+        },
+        {
+          "name": "Pınargözü Mağarası"
+        },
+        {
+          "name": "Eğirdir Gölü"
+        },
+        {
+          "name": "Adada Antik Kenti"
+        },
+        {
+          "name": "Aksu Zindan Mağarası"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Mersin",
+      "places": [
+        {
+          "name": "Kız Kalesi"
+        },
+        {
+          "name": "Tarsus Şelalesi"
+        },
+        {
+          "name": "Nursat Mayın Gemisi"
+        },
+        {
+          "name": "Alahan Manastırı"
+        },
+        {
+          "name": "Kanlı Divane Ören Yeri"
+        },
+        {
+          "name": "Mamure Kalesi"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "name": "İstanbul",
+      "places": [
+        {
+          "name": "Sultan Ahmet Camii"
+        },
+        {
+          "name": "Galata Kulesi"
+        },
+        {
+          "name": "Topkapı Sarayı"
+        },
+        {
+          "name": "Yerebatan Sarnıcı"
+        },
+        {
+          "name": "Kız Kulesi"
+        },
+        {
+          "name": "Hisarlar Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "İzmir",
+      "places": [
+        {
+          "name": "Yedi Uyuyanlar Mağarası"
+        },
+        {
+          "name": "Alsancak Kordonboyu"
+        },
+        {
+          "name": "Efes Antik Kenti"
+        },
+        {
+          "name": "Ödemiş Gölcük Gölü"
+        },
+        {
+          "name": "İzmir Saat Kulesi"
+        },
+        {
+          "name": "Selçuk - Şirince Köyü"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "name": "Kars",
+      "places": [
+        {
+          "name": "Kümbet Camisi"
+        },
+        {
+          "name": "Kars Müzesi"
+        },
+        {
+          "name": "Selçuklu Sarayı"
+        },
+        {
+          "name": "Taş Köprü"
+        },
+        {
+          "name": "Arpaçay Kütük Ev"
+        },
+        {
+          "name": "Ani Ören Yeri"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "name": "Kastamonu",
+      "places": [
+        {
+          "name": "Ilgaz Dağı Milli Parkı"
+        },
+        {
+          "name": "Horma Kanyonu"
+        },
+        {
+          "name": "Ilıca Şelalesi"
+        },
+        {
+          "name": "Atatürk ve Şerife Bacı Anıtı"
+        },
+        {
+          "name": "Şeyh Şabani Veli Külliyesi"
+        },
+        {
+          "name": "Kastamonu Kalesi"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "name": "Kayseri",
+      "places": [
+        {
+          "name": "Kültepe Ören Yeri"
+        },
+        {
+          "name": "Döner Kümbet"
+        },
+        {
+          "name": "Kayseri Kalesi"
+        },
+        {
+          "name": "Panaya Kilisesi"
+        },
+        {
+          "name": "Melikgazi Türbesi"
+        },
+        {
+          "name": "Gesi Bağları ve Güvercinlik"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Kırklareli",
+      "places": [
+        {
+          "name": "Dupnisa Mağarası"
+        },
+        {
+          "name": "Kıyıköy"
+        },
+        {
+          "name": "İğneada"
+        },
+        {
+          "name": "Sokullu Mehmet Paşa Köprüsü"
+        },
+        {
+          "name": "Zindan Baba Türbesi"
+        },
+        {
+          "name": "Tümülüsler"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Kırşehir",
+      "places": [
+        {
+          "name": "Cacabey Medresesi"
+        },
+        {
+          "name": "Kesikköprü"
+        },
+        {
+          "name": "Aflak Baba Kümbeti"
+        },
+        {
+          "name": "Kepez Yeraltı Şehri"
+        },
+        {
+          "name": "Üçayak Kilisesi"
+        },
+        {
+          "name": "Melikgazi Kümbeti"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "name": "Kocaeli",
+      "places": [
+        {
+          "name": "Seka Park"
+        },
+        {
+          "name": "Eskihisar Kalesi"
+        },
+        {
+          "name": "Pembe Kayalar"
+        },
+        {
+          "name": "Hannibal Anıt Mezarı"
+        },
+        {
+          "name": "Maşukiye - Kartepe"
+        },
+        {
+          "name": "Serindere Kanyonu"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "name": "Konya",
+      "places": [
+        {
+          "name": "Mevlana Müzesi"
+        },
+        {
+          "name": "Sırçalı Medrese"
+        },
+        {
+          "name": "Beyşehir Gölü"
+        },
+        {
+          "name": "Çatalhöyük Neolitik Kenti"
+        },
+        {
+          "name": "Eflatunpınar Hitit Su Anıtı"
+        },
+        {
+          "name": "Karapınar Obrukları"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "name": "Kütahya",
+      "places": [
+        {
+          "name": "Dumlupınar Şehitliği"
+        },
+        {
+          "name": "Frigya Vadileri"
+        },
+        {
+          "name": "Mızık Çamı"
+        },
+        {
+          "name": "Çinili Camii"
+        },
+        {
+          "name": "Tarihi Kütahya Konakları"
+        },
+        {
+          "name": "Aizanoi Antik Kenti"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "name": "Malatya",
+      "places": [
+        {
+          "name": "Zeynel Abidin Türbesi"
+        },
+        {
+          "name": "Sürgü Takaz Mesire Alanı"
+        },
+        {
+          "name": "Sultansuyu Harası"
+        },
+        {
+          "name": "Levent Vadisi"
+        },
+        {
+          "name": "Günpınar Şelalesi"
+        },
+        {
+          "name": "Arapgir Kozluk Çayı Kanyonu"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "Manisa",
+      "places": [
+        {
+          "name": "Sardes Antik Kenti"
+        },
+        {
+          "name": "Kula Volkanları"
+        },
+        {
+          "name": "Spil Dağı Milli Parkı"
+        },
+        {
+          "name": "Kula Peri Bacaları"
+        },
+        {
+          "name": "Yeni Han"
+        },
+        {
+          "name": "Aigai Antik Kenti"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "name": "Kahramanmaraş",
+      "places": [
+        {
+          "name": "Yeşilgöz"
+        },
+        {
+          "name": "Döngel Mağarası"
+        },
+        {
+          "name": "Kahramanmaraş Kalesi"
+        },
+        {
+          "name": "Kahramanmaraş Arkeoloji Müzesi"
+        },
+        {
+          "name": "Taş Medrese"
+        },
+        {
+          "name": "Tarihi Maraş Çarşıları"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "name": "Mardin",
+      "places": [
+        {
+          "name": "Dara Antik Kenti"
+        },
+        {
+          "name": "Midyat Devlet Konukevi"
+        },
+        {
+          "name": "Kasımiye Medresesi"
+        },
+        {
+          "name": "Mor Yakup Manastırı"
+        },
+        {
+          "name": "Hatuniye Medresesi"
+        },
+        {
+          "name": "Beyazsu"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "name": "Muğla",
+      "places": [
+        {
+          "name": "Bafa Gölü"
+        },
+        {
+          "name": "Kaunos Antik Kenti"
+        },
+        {
+          "name": "Milas Boğaziçi Köyü"
+        },
+        {
+          "name": "Euromos Antik Kenti"
+        },
+        {
+          "name": "Bodrum Sualtı Arkeoloji Müzesi"
+        },
+        {
+          "name": "Herakleia"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "name": "Muş",
+      "places": [
+        {
+          "name": "Tarihi Murat Köprüsü"
+        },
+        {
+          "name": "Malazgirt Kalesi"
+        },
+        {
+          "name": "Alaeddin Bey Camii"
+        },
+        {
+          "name": "Haspet Kalesi"
+        },
+        {
+          "name": "Hamurpet Gölü"
+        },
+        {
+          "name": "Yıldızlı Han"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "Nevşehir",
+      "places": [
+        {
+          "name": "Göreme Açık Hava Müzesi"
+        },
+        {
+          "name": "Asmalı Konak"
+        },
+        {
+          "name": "Karanlık Kilise"
+        },
+        {
+          "name": "Hacı Bektaşı Veli Müzesi"
+        },
+        {
+          "name": "Elmalı Kilise"
+        },
+        {
+          "name": "Tatlarin Yer Altı Şehri"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "name": "Niğde",
+      "places": [
+        {
+          "name": "Niğde Kalesi"
+        },
+        {
+          "name": "Roma Havuzu"
+        },
+        {
+          "name": "Sarı Saltuk Türbesi"
+        },
+        {
+          "name": "Yeşil Burç Kilise Camii"
+        },
+        {
+          "name": "Gümüşler Manastırı"
+        },
+        {
+          "name": "Kesikbaş Türbesi"
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "name": "Ordu",
+      "places": [
+        {
+          "name": "Boztepe"
+        },
+        {
+          "name": "Ulugöl Tabiat Parkı"
+        },
+        {
+          "name": "Paşaoğlu Konağo Etnografya Müzesi"
+        },
+        {
+          "name": "Karaoluk Şelalesi"
+        },
+        {
+          "name": "Asarkaya Kent Ormanı"
+        },
+        {
+          "name": "Küpkaya Kanyonu"
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "name": "Rize",
+      "places": [
+        {
+          "name": "Ayder Yaylası"
+        },
+        {
+          "name": "Kaçkar Dağları Milli Parkı"
+        },
+        {
+          "name": "Pileki Mağarası"
+        },
+        {
+          "name": "Yedi Göller"
+        },
+        {
+          "name": "Pokut Yaylası"
+        },
+        {
+          "name": "Anzer Yaylası"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "name": "Sakarya",
+      "places": [
+        {
+          "name": "Acarlar Longozu"
+        },
+        {
+          "name": "Doğançay Şelalesi"
+        },
+        {
+          "name": "Acelle Yaylası"
+        },
+        {
+          "name": "Keremali Türbesi"
+        },
+        {
+          "name": "Kent Park"
+        },
+        {
+          "name": "Gölpark"
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "name": "Samsun",
+      "places": [
+        {
+          "name": "Onur Anıtı"
+        },
+        {
+          "name": "Bandırma Gemi Müzesi"
+        },
+        {
+          "name": "Gazi Müzesi"
+        },
+        {
+          "name": "Tekkeköy Mağaraları"
+        },
+        {
+          "name": "Kurtuluş Yolu"
+        },
+        {
+          "name": "Canik Oyuncak Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "name": "Siirt",
+      "places": [
+        {
+          "name": "Veysel Karani Türbesi"
+        },
+        {
+          "name": "Siir Ulu Camii"
+        },
+        {
+          "name": "İrun Kalesi"
+        },
+        {
+          "name": "Zemzem-ül Hassa Hatun"
+        },
+        {
+          "name": "Tillo Kalesi ve Cam Seyir Terası"
+        },
+        {
+          "name": "Rasıl Hacar ve Botan Kanyonu"
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "name": "Sinop",
+      "places": [
+        {
+          "name": "İnaltı Mağarası"
+        },
+        {
+          "name": "Paşa Tabyaları"
+        },
+        {
+          "name": "Bazalt Kayalıkları"
+        },
+        {
+          "name": "Tatlıca Şelaleleri Tabiat Parkı"
+        },
+        {
+          "name": "Boyabat Kalesi"
+        },
+        {
+          "name": "Hamsilos Tabiat Parkı"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "name": "Sivas",
+      "places": [
+        {
+          "name": "Divriği Ulu Camii"
+        },
+        {
+          "name": "Gökpınar Gölü"
+        },
+        {
+          "name": "Sızır Şelalesi"
+        },
+        {
+          "name": "Buruciye Medresesi"
+        },
+        {
+          "name": "Eğri Köprü"
+        },
+        {
+          "name": "Kurşunlu Hamam"
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "name": "Tekirdağ",
+      "places": [
+        {
+          "name": "Uçmakdere"
+        },
+        {
+          "name": "Kapalı Kazak Gölü"
+        },
+        {
+          "name": "Çamlıköy Tabiat Parkı"
+        },
+        {
+          "name": "Dut Limanı Koyu"
+        },
+        {
+          "name": "Cumhuriyet Parkı"
+        },
+        {
+          "name": "Rüstem Paşa Camii"
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "name": "Tokat",
+      "places": [
+        {
+          "name": "Ballıca Mağarası"
+        },
+        {
+          "name": "Taşhan"
+        },
+        {
+          "name": "Mahperi Hatun Kervansarayı"
+        },
+        {
+          "name": "Almus Baraj Gölü"
+        },
+        {
+          "name": "Yeşilırmak Köprüsü"
+        },
+        {
+          "name": "Tokat Kalesi"
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "name": "Trabzon",
+      "places": [
+        {
+          "name": "Sümela Manastırı"
+        },
+        {
+          "name": "Atatürk Köşkü"
+        },
+        {
+          "name": "Trabzon Kalesi"
+        },
+        {
+          "name": "Sekiz Direkli Hamam"
+        },
+        {
+          "name": "Ortahisar Camii"
+        },
+        {
+          "name": "Gülbaharhatun Camii"
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "name": "Tunceli",
+      "places": [
+        {
+          "name": "Pertek Kalesi"
+        },
+        {
+          "name": "İn Delikleri"
+        },
+        {
+          "name": "Anıt Çınar Ağacı"
+        },
+        {
+          "name": "Mazgirt Kalesi"
+        },
+        {
+          "name": "Sağman Kalesi"
+        },
+        {
+          "name": "Gelin Odaları ve Mağaraları"
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "name": "Şanlıurfa",
+      "places": [
+        {
+          "name": "Balıklıgöl"
+        },
+        {
+          "name": "Göbeklitepe Örenyeri"
+        },
+        {
+          "name": "Rızvaniye Camii"
+        },
+        {
+          "name": "Soğmatar Antik Kenti"
+        },
+        {
+          "name": "Harran Kümbet Evleri"
+        },
+        {
+          "name": "Şanlıurfa Arkeoloji Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "name": "Uşak",
+      "places": [
+        {
+          "name": "Taşyaran Vadisi"
+        },
+        {
+          "name": "Ulubey Kanyonu"
+        },
+        {
+          "name": "Clandiras Su Kemeri"
+        },
+        {
+          "name": "Atatürk ve Kurtuluş Anıtı"
+        },
+        {
+          "name": "Tepedelen Çamı"
+        },
+        {
+          "name": "Eski Uşak Evleri"
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "name": "Van",
+      "places": [
+        {
+          "name": "Muradiye Şelalesi"
+        },
+        {
+          "name": "Edremit Kız Kalesi Seyir Terası"
+        },
+        {
+          "name": "Van Kalesi"
+        },
+        {
+          "name": "Tarihi Van Evleri Mahallesi"
+        },
+        {
+          "name": "Çavuştepe Kalesi"
+        },
+        {
+          "name": "Van Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "name": "Yozgat",
+      "places": [
+        {
+          "name": "Yozgat Sarıkaya Kaplıcaları"
+        },
+        {
+          "name": "Çapanoğlu Camii"
+        },
+        {
+          "name": "Yozgat Saat Kulesi"
+        },
+        {
+          "name": "Yozgat Müzesi"
+        },
+        {
+          "name": "Akdağmadeni Kilisesi"
+        },
+        {
+          "name": "Çamlık Milli Parkı"
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "name": "Zonguldak",
+      "places": [
+        {
+          "name": "Cehennemağzı Mağaraları"
+        },
+        {
+          "name": "Gökgöl Mağarası"
+        },
+        {
+          "name": "Filyos Kalesi"
+        },
+        {
+          "name": "Karadeniz Ereğli Müzesi"
+        },
+        {
+          "name": "Filyos Tios Ören Yeri"
+        },
+        {
+          "name": "Kapuz Plajı"
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "name": "Aksaray",
+      "places": [
+        {
+          "name": "Narlıgöl"
+        },
+        {
+          "name": "Sultanhan"
+        },
+        {
+          "name": "Eğri Minare"
+        },
+        {
+          "name": "Zinciriye Medresesi"
+        },
+        {
+          "name": "Tuz Gölü"
+        },
+        {
+          "name": "Hasan Dağı"
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "name": "Bayburt",
+      "places": [
+        {
+          "name": "Bayburt Kalesi"
+        },
+        {
+          "name": "Aydıntepe Yer Altı Şelalesi"
+        },
+        {
+          "name": "Sırakayalar Şelalesi"
+        },
+        {
+          "name": "Korgan Köprüsü"
+        },
+        {
+          "name": "Bayburt Saat Kulesi"
+        },
+        {
+          "name": "Çımağıl Mağarası"
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "name": "Karaman",
+      "places": [
+        {
+          "name": "İncesu Mağarası"
+        },
+        {
+          "name": "Karaman Kalesi"
+        },
+        {
+          "name": "Zeyve Pazarı"
+        },
+        {
+          "name": "Hürrem Dayı Evi"
+        },
+        {
+          "name": "Taşkale Tahıl Ambarları"
+        },
+        {
+          "name": "Hatuniye Medresesi"
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "name": "Kırıkkale",
+      "places": [
+        {
+          "name": "Çeşnigir Köprüsü"
+        },
+        {
+          "name": "Silah Müzesi"
+        },
+        {
+          "name": "Tarihi Evler"
+        },
+        {
+          "name": "Taş Mektep"
+        },
+        {
+          "name": "Koçubaba Camii ve Türbesi"
+        },
+        {
+          "name": "Sulu Mağara"
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "name": "Batman",
+      "places": [
+        {
+          "name": "Hasankeyf Ören Yeri"
+        },
+        {
+          "name": "Hızır Bey Camii"
+        },
+        {
+          "name": "Kandil Galesi"
+        },
+        {
+          "name": "Rabat Kalesi"
+        },
+        {
+          "name": "Mor Aho Manastırı"
+        },
+        {
+          "name": "İbrahim Bey Camii"
+        }
+      ]
+    },
+    {
+      "id": "73",
+      "name": "Şırnak",
+      "places": [
+        {
+          "name": "Mem U Zin Türbesi"
+        },
+        {
+          "name": "Kırmızı Medrese"
+        },
+        {
+          "name": "Finik Kalesi"
+        },
+        {
+          "name": "Cizre Kalesi"
+        },
+        {
+          "name": "Hamidiye Kışla Binası"
+        },
+        {
+          "name": "Zümrüt Kaplıcası"
+        }
+      ]
+    },
+    {
+      "id": "74",
+      "name": "Bartın",
+      "places": [
+        {
+          "name": "Amasra Kalesi"
+        },
+        {
+          "name": "Ulukaya Şelalesi"
+        },
+        {
+          "name": "Fatih Camii"
+        },
+        {
+          "name": "Küçük Kilise"
+        },
+        {
+          "name": "Balamba Tabiat Parkı"
+        },
+        {
+          "name": "Bartın Bedesteni"
+        }
+      ]
+    },
+    {
+      "id": "75",
+      "name": "Ardahan",
+      "places": [
+        {
+          "name": "Şeytan Kalesi"
+        },
+        {
+          "name": "Ardahan Kalesi"
+        },
+        {
+          "name": "Ramazan Tabyası"
+        },
+        {
+          "name": "Çıldır Gölü"
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "name": "Iğdır",
+      "places": [
+        {
+          "name": "Tuzluca Tuz Mağaraları"
+        },
+        {
+          "name": "Anıt Müze"
+        },
+        {
+          "name": "Karakoyunlu Koçbaşı Açık Hava Müzesi"
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "name": "Yalova",
+      "places": [
+        {
+          "name": "Yürüyen Köşk"
+        },
+        {
+          "name": "Suduşen Şelalesi"
+        },
+        {
+          "name": "Termal Atatürk Köşkü"
+        },
+        {
+          "name": "Karlık Yaylası"
+        },
+        {
+          "name": "Dipsiz Göl"
+        },
+        {
+          "name": "Delmece Yaylası"
+        }
+      ]
+    },
+    {
+      "id": "78",
+      "name": "Karabük",
+      "places": [
+        {
+          "name": "Bulak Mencilis Mağarası"
+        },
+        {
+          "name": "Tokatlı Kanyonu"
+        },
+        {
+          "name": "Cinci Hanı"
+        },
+        {
+          "name": "Şeker Kanyonu"
+        },
+        {
+          "name": "Safranbolu Kent Tarih Müzesi"
+        },
+        {
+          "name": "Hadrianapolis Antik Kenti"
+        }
+      ]
+    },
+    {
+      "id": "79",
+      "name": "Kilis",
+      "places": [
+        {
+          "name": "Ravanda Kalesi"
+        },
+        {
+          "name": "Şeyh Mansur Türbesi"
+        },
+        {
+          "name": "Akıncı Konağı"
+        },
+        {
+          "name": "Tekke Camii"
+        },
+        {
+          "name": "Eski Hamam"
+        },
+        {
+          "name": "Oylum Höyük"
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "name": "Osmaniye",
+      "places": [
+        {
+          "name": "Karaçay Şelalesi ve Mesire Alanı"
+        },
+        {
+          "name": "Zorkun Yaylası"
+        },
+        {
+          "name": "Toprakkale Kalesi"
+        },
+        {
+          "name": "Gaffarlı Taş Köprü"
+        },
+        {
+          "name": "Kırmıtlı Kuş Cenneti"
+        },
+        {
+          "name": "Kastabala Antik Kenti"
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "name": "Düzce",
+      "places": [
+        {
+          "name": "Akçakoca"
+        },
+        {
+          "name": "Düzce Şelaleleri"
+        },
+        {
+          "name": "Fakıllı Mağarası"
+        },
+        {
+          "name": "Aktaş Şelalesi"
+        },
+        {
+          "name": "Efteni Gölü"
+        },
+        {
+          "name": "Ceneviz Kalesi"
+        }
+      ]
+    }
+  ]
+}

@@ -10,8 +10,8 @@ import WeatherInfo from './city-detail/WeatherInfo';
 const MapComponent = dynamic(() => import('@/components/map/MapComponent'), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[300px] bg-white/5 animate-pulse rounded-lg flex items-center justify-center">
-      <span className="text-white/50">Harita yükleniyor...</span>
+    <div className="w-full h-[300px] bg-white/5 dark:bg-white/5 animate-pulse rounded-lg flex items-center justify-center">
+      <span className="text-gray-500 dark:text-white/50">Harita yükleniyor...</span>
     </div>
   )
 });
@@ -98,7 +98,7 @@ export default function CityDetailModal({ isOpen, onClose, city }: CityDetailMod
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
+          <div className="fixed inset-0 bg-gray-600/50 dark:bg-black/60 backdrop-blur-sm" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -112,25 +112,25 @@ export default function CityDetailModal({ isOpen, onClose, city }: CityDetailMod
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md p-6 shadow-xl transition-all border border-white/20">
+              <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-gray-100/80 dark:bg-white/10 backdrop-blur-md p-6 shadow-xl transition-all border border-gray-200/40 dark:border-white/20">
                 <div className="relative">
                   {/* Close Button */}
                   <button
                     onClick={onClose}
-                    className="absolute right-0 top-0 p-2 rounded-full hover:bg-white/10 transition-colors"
+                    className="absolute right-0 top-0 p-2 rounded-full hover:bg-[#33333320] dark:hover:bg-white/10 transition-colors"
                   >
-                    <HiX className="w-6 h-6 text-white" />
+                    <HiX className="w-6 h-6 text-gray-700 dark:text-white" />
                   </button>
 
                   {/* Title */}
-                  <Dialog.Title className="text-2xl font-bold text-white mb-6">
+                  <Dialog.Title className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
                     {city.name}
                   </Dialog.Title>
 
                   {/* Content */}
                   <div className="space-y-6">
                     {/* Location */}
-                    <div className="flex items-center gap-2 text-white/80">
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-white/80">
                       <HiOutlineLocationMarker className="w-5 h-5" />
                       <span>{city.region} Bölgesi</span>
                     </div>
@@ -155,8 +155,8 @@ export default function CityDetailModal({ isOpen, onClose, city }: CityDetailMod
                     />
 
                     {/* Map */}
-                    <div className="bg-white/5 rounded-xl p-4 space-y-3">
-                      <div className="flex items-center gap-2 text-white">
+                    <div className="bg-gray-100 dark:bg-white/5 rounded-xl p-4 space-y-3">
+                      <div className="flex items-center gap-2 text-gray-800 dark:text-white">
                         <HiOutlineLocationMarker className="w-5 h-5" />
                         <span className="font-medium">Konum</span>
                       </div>
@@ -164,6 +164,7 @@ export default function CityDetailModal({ isOpen, onClose, city }: CityDetailMod
                         <MapComponent 
                           city={city.name}
                           places={places}
+                          
                         />
                       </div>
                     </div>

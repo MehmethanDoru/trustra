@@ -23,9 +23,9 @@ export default function WeatherInfo({
   onNextDate
 }: WeatherInfoProps) {
   return (
-    <div className="bg-white/5 rounded-xl p-4 space-y-3">
+    <div className="bg-gray-100 dark:bg-white/5 rounded-xl p-4 space-y-3">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-white">
+        <div className="flex items-center gap-2 text-gray-800 dark:text-white">
           <HiOutlineSun className="w-5 h-5" />
           <span className="font-medium">Hava Durumu</span>
         </div>
@@ -33,11 +33,11 @@ export default function WeatherInfo({
           <button
             onClick={onPrevDate}
             disabled={currentDateIndex === 0}
-            className="p-1 rounded-full hover:bg-white/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <HiChevronLeft className="w-5 h-5 text-white" />
+            <HiChevronLeft className="w-5 h-5 text-gray-700 dark:text-white" />
           </button>
-          <span className="text-sm text-white/80">
+          <span className="text-sm text-gray-600 dark:text-white/80">
             {new Date(currentDate).toLocaleDateString('tr-TR', {
               day: 'numeric',
               month: 'long'
@@ -46,27 +46,27 @@ export default function WeatherInfo({
           <button
             onClick={onNextDate}
             disabled={currentDateIndex === totalDates - 1}
-            className="p-1 rounded-full hover:bg-white/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <HiChevronRight className="w-5 h-5 text-white" />
+            <HiChevronRight className="w-5 h-5 text-gray-700 dark:text-white" />
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 text-white/80">
+      <div className="grid grid-cols-2 gap-4 text-gray-600 dark:text-white/80">
         <div>
           <p className="text-sm">Durum</p>
-          <p className="font-medium text-white">{currentWeather.condition}</p>
+          <p className="font-medium text-gray-800 dark:text-white">{currentWeather.condition}</p>
         </div>
         <div>
           <p className="text-sm">Sıcaklık (Gündüz/Gece)</p>
-          <p className="font-medium text-white">
+          <p className="font-medium text-gray-800 dark:text-white">
             {currentWeather.dayTemp}°C / {currentWeather.nightTemp}°C
           </p>
         </div>
         {currentWeather.precipitation && (
           <div>
             <p className="text-sm">Yağış Olasılığı</p>
-            <p className="font-medium text-white">{currentWeather.precipitation}</p>
+            <p className="font-medium text-gray-800 dark:text-white">{currentWeather.precipitation}</p>
           </div>
         )}
       </div>

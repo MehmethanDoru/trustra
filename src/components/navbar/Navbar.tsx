@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -29,7 +30,9 @@ const Navbar = () => {
     <nav className={`
       fixed w-full top-0 z-50 transition-all duration-300
       ${isScrolled 
-        ? 'bg-black/40 backdrop-blur-md shadow-lg py-2' 
+        ? isDark 
+          ? 'bg-black/40 backdrop-blur-md shadow-lg py-2'
+          : 'bg-[#96b3ea42] backdrop-blur-md shadow-lg py-2'
         : 'bg-transparent backdrop-blur-[1px] md:mt-7 mt-2'
       }
       px-4 md:px-0
@@ -40,12 +43,17 @@ const Navbar = () => {
         transition-all duration-300
       `}>
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           <h1 className={`
-            font-bold text-white drop-shadow-md hover:text-white/90 transition-all duration-300
-            ${isScrolled ? 'text-2xl' : 'text-3xl'}
+            font-bold drop-shadow-md transition-all duration-300
+            ${isScrolled 
+              ? isDark
+                ? 'text-2xl text-white hover:text-white/90'
+                : 'text-2xl text-[#1f3c72] hover:text-[#101a67]'
+              : 'text-3xl text-white hover:text-white/90'
+            }
           `}>
-            Trustra
+            <Link href="/" onClick={() => window.location.reload()}>Trustra</Link>
           </h1>
         </div>
 
@@ -54,8 +62,14 @@ const Navbar = () => {
           <button 
             onClick={toggleDarkMode}
             className={`
-              rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all duration-300
-              ${isScrolled ? 'p-1.5 text-sm' : 'p-2'}
+              rounded-lg transition-all duration-300
+              
+              ${isScrolled ?
+                isDark ? 'bg-white/10 hover:bg-white/20 text-white'
+                 : 'bg-[#1a267df6] hover:bg-[#101a67]/90 text-white'
+                 : 'bg-white/10'
+              } p-1.5   
+
             `}
           >
             {isDark ? '☀️' : '🌙'}
@@ -66,4 +80,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

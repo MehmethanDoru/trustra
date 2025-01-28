@@ -21,7 +21,7 @@ const SkeletonLoader = () => (
   </div>
 );
 
-export default function PlacesList({ isLoading, places, cityName }: PlacesListProps) {
+export default function PlacesList({ isLoading, places}: PlacesListProps) {
   return (
     <div className="bg-gray-100 dark:bg-white/5 rounded-xl p-4 space-y-3">
       <div className="flex items-center gap-2 text-gray-800 dark:text-white">

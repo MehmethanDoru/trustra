@@ -30,18 +30,6 @@ const weatherOptions = [
   }
 ];
 
-// Convert Turkish characters to English characters
-const turkishToLower = (str: string) => {
-  return str
-    .toLowerCase()
-    .replace(/ı/g, 'i')
-    .replace(/i̇/g, 'i')
-    .replace(/ğ/g, 'g')
-    .replace(/ü/g, 'u')
-    .replace(/ş/g, 's')
-    .replace(/ö/g, 'o')
-    .replace(/ç/g, 'c');
-};
 
 interface WeatherSelectProps {
   onSelect: (weather: { id: number; name: string; } | null) => void;

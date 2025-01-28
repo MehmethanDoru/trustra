@@ -40,20 +40,13 @@ export default function Home() {
     endDate: null
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState<'route' | 'all'>('all');
   const [cities, setCities] = useState<City[]>([]);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrolled / maxScroll) * 100;
-      
       setShowScrollButton(scrolled > 300);
-      setScrollProgress(progress);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -128,7 +121,14 @@ export default function Home() {
 
       Object.entries(data.data).forEach(([date, cityDataArray]) => {
         if (date >= startDateStr && date <= endDateStr) {
-          (cityDataArray as any[]).forEach((city) => {
+          (cityDataArray as Array<{
+            cityName: string;
+            region: string;
+            condition: string;
+            dayTemp: number;
+            nightTemp: number;
+            precipitation?: number;
+          }>).forEach((city) => {
             let matches = false;
 
             if (selectedWeather.name in tempRanges) {
@@ -208,7 +208,6 @@ export default function Home() {
         onDateSelect={setSelectedDates}
         onSearch={handleSearch}
         isLoading={isLoading}
-        onTabChange={setActiveTab}
       />
       <CityResults
         cities={cities}
@@ -218,7 +217,6 @@ export default function Home() {
       />
       {showScrollButton && (
         <div className="fixed bottom-8 right-8 z-50">
-         
           <button
             onClick={scrollToTop}
             className="relative bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 cursor-pointer hover:shadow-blue-500/50 hover:-translate-y-1 group"

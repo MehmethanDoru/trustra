@@ -14,18 +14,11 @@ interface HeroProps {
   }) => void;
   onSearch: () => void;
   isLoading: boolean;
-  onTabChange: (tab: "route" | "all") => void;
 }
 
 const texts = ["Hava Koşuluna Göre", "Hava Sıcaklığına Göre"];
 
-export default function Hero({
-  onWeatherSelect,
-  onDateSelect,
-  onSearch,
-  isLoading,
-  onTabChange,
-}: HeroProps) {
+export default function Hero({ onWeatherSelect, onDateSelect, onSearch, isLoading }: HeroProps) {
   const [activeTab, setActiveTab] = useState<"route" | "all">("all");
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -33,7 +26,6 @@ export default function Hero({
 
   const handleTabChange = (tab: "route" | "all") => {
     setActiveTab(tab);
-    onTabChange(tab);
   };
 
   useEffect(() => {

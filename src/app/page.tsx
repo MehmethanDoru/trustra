@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Hero from '@/components/hero/Hero';
 import CityResults from '@/components/results/CityResults';
+import toast from 'react-hot-toast';
 
 interface WeatherOption {
   id: number;
@@ -75,8 +76,23 @@ export default function Home() {
   };
 
   const handleSearch = async () => {
-    if (!selectedWeather || !selectedDates.startDate || !selectedDates.endDate) {
-      console.log('Lütfen hava durumu ve tarih aralığı seçin');
+    if (!selectedWeather) {
+      toast.error('Lütfen hava durumu seçin', {
+        style: {
+          background: document.documentElement.classList.contains('dark') ? '#1f2937' : '#fff',
+          color: document.documentElement.classList.contains('dark') ? '#fff' : '#1f2937'
+        }
+      });
+      return;
+    }
+
+    if (!selectedDates.startDate || !selectedDates.endDate) {
+      toast.error('Lütfen tarih aralığı seçin', {
+        style: {
+          background: document.documentElement.classList.contains('dark') ? '#1f2937' : '#fff',
+          color: document.documentElement.classList.contains('dark') ? '#fff' : '#1f2937'
+        }
+      });
       return;
     }
 
@@ -84,11 +100,30 @@ export default function Home() {
       setIsLoading(true);
       setCities([]); // reset
 
-      const response = await fetch('/api/weather/collect2');
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => {
+        controller.abort();
+        toast.error('İstek zaman aşımına uğradı. Lütfen tekrar deneyin.');
+      }, 60000);
+
+      const response = await fetch('/api/weather/collect2', {
+        signal: controller.signal,
+        headers: {
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache'
+        }
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
 
       if (!data.data) {
-        console.log('Veri bulunamadı');
+        toast.error('Veri bulunamadı');
         return;
       }
 
@@ -196,6 +231,13 @@ export default function Home() {
 
     } catch (error) {
       console.error('Veri alınırken hata oluştu:', error);
+      if (error instanceof Error) {
+        if (error.name === 'AbortError') {
+          toast.error('İstek zaman aşımına uğradı. Lütfen tekrar deneyin.');
+        } else {
+          toast.error('Veri alınırken bir hata oluştu. Lütfen tekrar deneyin.');
+        }
+      }
     } finally {
       setIsLoading(false);
     }

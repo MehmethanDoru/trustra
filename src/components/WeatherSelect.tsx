@@ -105,10 +105,20 @@ export default function WeatherSelect({ onSelect }: WeatherSelectProps) {
               displayValue={(weather: { id: number; name: string; } | null) => weather?.name ?? ''}
               onChange={(event) => {
                 setQuery(event.target.value);
-                !isOpen && setIsOpen(true);
+                if (!isOpen) {
+                  setIsOpen(true);
+                }
               }}
-              onClick={() => !isOpen && setIsOpen(true)}
-              onFocus={() => !isOpen && setIsOpen(true)}
+              onClick={() => {
+                if (!isOpen) {
+                  setIsOpen(true);
+                }
+              }}
+              onFocus={() => {
+                if (!isOpen) {
+                  setIsOpen(true);
+                }
+              }}
               placeholder="Hava durumu tercihi"
               autoComplete="off"
             />

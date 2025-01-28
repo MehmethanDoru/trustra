@@ -45,7 +45,7 @@ export default function PlacesList({ isLoading, places}: PlacesListProps) {
           </div>
         )}
       </div>
-      <span className="text-xs text-gray-400 dark:text-white/50 mt-2 block">*Yerler Türkiye Kültür Portalı'ndan alınmıştır.</span>
+      <span className="text-xs text-gray-400 dark:text-white/50 mt-2 block">*Yerler Türkiye Kültür Portalı&apos;ndan alınmıştır.</span>
     </div>  
   );
 }

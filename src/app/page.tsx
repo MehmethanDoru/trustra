@@ -181,7 +181,7 @@ export default function Home() {
       console.log('Toplam gün sayısı:', totalDays);
 
       const consistentCities = Object.entries(cityData)
-        .filter(([_, data]) => data.dates.length === totalDays)
+        .filter(([, data]) => data.dates.length === totalDays)
         .map(([name, data]) => ({
           name,
           region: data.region,

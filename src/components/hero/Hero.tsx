@@ -5,15 +5,6 @@ import WeatherSelect from "@/components/WeatherSelect";
 import DateRangePicker from "@/components/DateRangePicker";
 import { useState, useEffect } from "react";
 
-interface WeatherOption {
-  id: number;
-  name: string;
-}
-
-interface DateRange {
-  startDate: Date | null;
-  endDate: Date | null;
-}
 
 interface HeroProps {
   onWeatherSelect: (weather: { id: number; name: string } | null) => void;

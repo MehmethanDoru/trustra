@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import DatePicker, { registerLocale } from 'react-datepicker';
-import tr from 'date-fns/locale/tr';
 import "react-datepicker/dist/react-datepicker.css";
 import { format, addDays } from 'date-fns';
 import { tr as trLocale } from 'date-fns/locale';

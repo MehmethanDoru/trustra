@@ -2,7 +2,7 @@
 
 import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { HiX, HiOutlineLocationMarker, HiOutlineSun, HiOutlineCalendar, HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { HiX, HiOutlineLocationMarker } from 'react-icons/hi';
 import dynamic from 'next/dynamic';
 import PlacesList from './city-detail/PlacesList';
 import WeatherInfo from './city-detail/WeatherInfo';

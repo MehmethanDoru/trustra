@@ -18,12 +18,12 @@ interface City {
   name: string;
   region: string;
   dates: string[];
-  weather?: {
+  weatherByDate: Record<string, {
     condition: string;
     dayTemp: number;
     nightTemp: number;
     precipitation?: number;
-  };
+  }>;
 }
 
 const tempRanges = {
@@ -45,6 +45,7 @@ export default function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;

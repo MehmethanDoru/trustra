@@ -19,14 +19,14 @@ interface HeroProps {
 const texts = ["Hava Koşuluna Göre", "Hava Sıcaklığına Göre"];
 
 export default function Hero({ onWeatherSelect, onDateSelect, onSearch, isLoading }: HeroProps) {
-  const [activeTab, setActiveTab] = useState<"route" | "all">("all");
+  // const [activeTab, setActiveTab] = useState<"route" | "all">("all");
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
 
-  const handleTabChange = (tab: "route" | "all") => {
-    setActiveTab(tab);
-  };
+  // const handleTabChange = (tab: "route" | "all") => {
+  //   setActiveTab(tab);
+  // };
 
   useEffect(() => {
     const currentText = texts[loopNum % texts.length];
@@ -139,7 +139,8 @@ export default function Hero({ onWeatherSelect, onDateSelect, onSearch, isLoadin
               </>
             ) : (
               <span className="flex items-center gap-2">
-                {activeTab === "all" ? "Şehirleri Bul" : "Rota Oluştur"}
+                {/* {activeTab === "all" ? "Şehirleri Bul" : "Rota Oluştur"} */}
+                Şehirleri Bul
                 <svg
                   className="w-5 h-5"
                   fill="none"

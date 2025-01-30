@@ -65,8 +65,9 @@ export default function Hero({ onWeatherSelect, onDateSelect, onSearch, isLoadin
       <div className="container relative z-10 mt-0">
         <div className="text-center max-w-4xl mx-auto px-4">
           <div className="space-y-6 mb-12">
-            {/* Tab Toggle */}
-            <div className="flex justify-center mb-8">
+            
+            {/* Tab Toggle Next feature*/}
+            {/* <div className="flex justify-center mb-8">
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-1 inline-flex">
                 <button
                   onClick={() => handleTabChange("all")}
@@ -91,7 +92,8 @@ export default function Hero({ onWeatherSelect, onDateSelect, onSearch, isLoadin
                   Rota Oluştur
                 </button>
               </div>
-            </div>
+            </div> */}
+
             <h1 className="text-4xl sm:text-5xl font-bold text-[#fff] [text-shadow:_0_1px_12px_rgb(0_0_0_/_20%)] tracking-tight leading-tight sm:leading-normal ">
               <span className="inline-block   border-b-[3px] border-[#fff] pr-1">
                 {text}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import DatePicker, { registerLocale } from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
+import "@/styles/datepicker.css";  
 import { format, addDays } from 'date-fns';
 import { tr as trLocale } from 'date-fns/locale';
 import { HiCalendar, HiChevronLeft, HiChevronRight } from 'react-icons/hi2';

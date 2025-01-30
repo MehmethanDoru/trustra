@@ -161,7 +161,7 @@ export default function WeatherSelect({ onSelect }: WeatherSelectProps) {
 
                   return (
                     <div key={category.category}>
-                      <div className="px-4 py-2 text-sm font-medium text-start text-white/70 bg-white/5 backdrop-blur-md">
+                      <div className="px-4 py-2 text-sm font-medium text-start text-white/70 bg-[#0000003e] rounded-lg">
                         {category.category}
                       </div>
                       {filteredOptions.map((weather, index) => (

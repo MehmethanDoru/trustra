@@ -28,19 +28,22 @@ export default function PlacesList({ isLoading, places}: PlacesListProps) {
         <LuPartyPopper className="w-5 h-5" />
         <h3 className="font-medium">Gidilmesi Önerilen Yerler*</h3>
       </div>
-      <div className="grid grid-cols-3 gap-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
         {isLoading ? (
           <SkeletonLoader />
         ) : (
           places?.map((place, index) => (
-            <div key={index} className="flex items-center gap-0 text-gray-600 dark:text-white/80">
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-white/40" />
-              &nbsp;{place.name}
+            <div 
+              key={index} 
+              className="flex items-center gap-2 text-gray-600 dark:text-white/80 text-sm sm:text-base"
+            >
+              <span className="min-w-[6px] h-1.5 rounded-full bg-gray-400 dark:bg-white/40" />
+              <span className="line-clamp-1">{place.name}</span>
             </div>
           ))
         )}
         {!isLoading && (!places || places.length === 0) && (
-          <div className="col-span-3 text-center py-4 text-gray-500 dark:text-white/70">
+          <div className="col-span-full text-center py-4 text-gray-500 dark:text-white/70">
             Bu şehir için henüz önerilen bir yer bulunmamaktadır.
           </div>
         )}
